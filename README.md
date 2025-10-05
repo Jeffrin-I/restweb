@@ -1,5 +1,5 @@
 # Ex.07 Restaurant Website
-## Date:
+## Date: 05-10-2025
 
 ## AIM:
 To develop a static Restaurant website to display the food items and services provided by them.
@@ -28,9 +28,506 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM:
+```
+rest.html
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Poppins&family=Playfair+Display&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="controller">
+            <ul id="navbar">
+                <h2 id="head">HappyFood
+                </h2>
+                <li><a href="#home" onclick="why()">Home</a></li>
+                <li><a href="admin.html">Administration</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Signature Dish" class = "menu-item">
+
+    <div class="content-type">
+        <h1>Best Quality <br> Food</h1><br>
+        <p><strong>we serve up a delicious mix of South Indian classics, fast food favorites,
+            <br> juicy burgers, and refreshing beverages — all crafted with love and premium ingredients.
+</strong></p>
+    </div>
+    <footer id="footer">
+        <h1>&copy;</h1><h4>Jeffrin | 25009198</h4>
+    </footer>
+</body>
+
+
+</html>
+<script>
+    function why(){
+        alert("You are already on the home page")
+    }
+</script>
+
+style.css
+
+* {
+    padding: 0px;
+    margin: 0px;
+    accent-color: #FFD700;
+}
+
+body {
+    background-color: #FFF8F0;
+    overflow-x: hidden;
+}
+.controller{
+    width: 100%;
+}
+#navbar {
+    background-color: #A52A2A;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 25px;
+    margin-left: 0%;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    font-family: 'Roboto Mono', monospace;
+    color:#FAF9F6;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-weight:700;
+    font-size: large;
+    color: #FAF9F6;
+    font-family:'poppins', sans-serif;
+}
+
+li {
+    padding-top: 10px;
+    padding:10px;
+}
+
+#head {
+    font-family: playfair display;
+    position: relative;
+    top:-2px;
+    font-size:xx-large;
+    margin-left:60px;
+    color:#FAF9F6;
+}
+
+p {
+    text-align: left;
+    color:#2A2D43;
+}
+
+.content-type {
+    margin-top: 170px;
+    animation: slideInLeft 1s ease-out forwards;
+    display: inline-block;
+    position: relative;
+    bottom:100px;
+    right:200px;
+}
+.content-type h1,p{
+    color:#2A2D43;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+*:hover{
+    cursor:context-menu;
+}
+.menu-item {
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: scaleUp 1.2s ease-out forwards;
+    position: relative;
+    left: 1100px;
+    top:60px;
+    border-radius: 25%;
+}
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+li:hover{
+    background-color: #2A2D43;
+    border-radius: 10px;
+    
+}
+#navbar a:hover{
+    color: #A2C7E5;
+    cursor:pointer;
+}
+#footer h4{
+    word-spacing: 20px;
+}
+#footer h1{
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    right:10px;
+    bottom:0px;
+}
+#footer h4{
+    position: relative;
+    top:6px;
+}
+#head {
+  font-family: 'Great Vibes', cursive;
+}
+
+.content-type h1 {
+  font-family: 'Satisfy', cursive;
+}
+
+.content-type p {
+  font-family: 'Dancing Script', cursive;
+}
+
+admin.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Our Administration Team</h1>
+    </header>
+    <div class="parent">
+        <div class="child"><img src="Generated Image October 05, 2025 - 4_04PM.png"><h2>Founder</h2></div>
+        <div class="child"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Tom_Holland_by_Gage_Skidmore.jpg"><h2>Co-Founder</h2></div>
+        <div class="child"><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Chris_Evans_SDCC_2014.jpg"><h2>Team Leader</h2></div>
+        <div class="child"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg"><h2>Senior Developer</h2></div>
+    </div>
+    <footer>
+        <h4>&copy; Jeffrin | 25009198</h4>
+    </footer>
+</body>
+
+</html>
+
+admin.css
+
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    overflow: hidden;
+    background-color: beige;
+}
+footer{
+    background-color: #2e2e2e;
+    font-family: 'Roboto Mono', monospace;
+    color:#FAF9F6;
+    position:relative;
+    bottom: 0%;
+    top:80%;
+    text-align:center;
+    display: block;
+    width:100%;
+    padding:20px;
+}
+header{
+    background-color:#A52A2A;
+    color:white;
+    text-align: center;
+    text-shadow : 2px 2px 4px rgba(0,0,0,0.4);
+    padding:20px;
+    width:100%;
+}
+.parent{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top:40px;
+    text-align: center;
+    color:#2e2e2e;
+    margin-bottom:40px;
+
+}
+img{
+    width:300px;
+    height:450px;
+    border-radius: 10%;
+}
+.child{
+    padding:20px;
+}
+
+menu.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Our Menu</h1>
+        <br><br><br><br>
+        <div class="category">
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/725990/pexels-photo-725990.jpeg" alt="Calamari">
+                <h3>Calamari</h3>
+                <p>Fried squid served with marinara sauce. $9.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg" alt="Prosciutto e Melone">
+                <h3>Prosciutto e Melone</h3>
+                <p>Thinly sliced prosciutto wrapped around sweet melon. $8.49</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza with fresh tomatoes, mozzarella, and basil. $12.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg" alt="Spaghetti Carbonara">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Creamy pasta with pancetta, egg, and Parmesan. $14.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/1487511/pexels-photo-1487511.jpeg" alt="Lasagna">
+                <h3>Lasagna</h3>
+                <p>Layers of pasta, meat sauce, and melted cheese. $15.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/2133989/pexels-photo-2133989.jpeg" alt="Fettuccine Alfredo">
+                <h3>Fettuccine Alfredo</h3>
+                <p>Creamy Alfredo sauce over fettuccine pasta. $13.49</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg" alt="Pesto Gnocchi">
+                <h3>Pesto Gnocchi</h3>
+                <p>Soft potato dumplings in a basil pesto sauce. $14.49</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Rich coffee-flavored dessert with mascarpone and cocoa. $6.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich, bold Italian coffee. $3.99</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>&copy; Jeffrin | 25009198</h4>
+    </footer>
+</body>
+
+</html>
+
+menu.css
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: beige;
+    text-align: center;
+    font-size: large;
+}
+p{
+    font-weight: 500;
+font-family: 'Playfair Display', serif;
+}
+.box{
+    margin-bottom: 100px;
+}
+.menu-item img {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    border-radius: 10%;
+    text-align: center;
+    animation: scaleUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.5);
+    animation-duration: 0.2s;
+}
+.menu-item h3,p{
+    position:relative;
+    top:20px;
+}
+.box h1{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    padding: 20px;
+    color:#FAF9F6;
+    background-color: #A52A2A;
+}
+.category{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+    text-align: center;
+}
+@keyframes scaleUp{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+footer{
+    background-color: #2e2e2e;
+    font-family: 'Roboto Mono', monospace;
+    color:#FAF9F6;
+    position:fixed;
+    top:93%;
+    text-align: center;
+    width:100%;
+    padding:20px;
+}
+
+contact.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Contact Us</h1><br><br>
+        <p>Ready to enjoy a delicious meal at HappyFood? We’d love to hear from you! Visit us at 123 Flavor Street, Chennai, or give us a call at (555) 123-4567 to make a reservation.</p>
+        <br><p>For inquiries, catering, or special events, reach out via email at info@happyfood.com. Follow us on social media for updates and specials. We can’t wait to welcome you to our table!</p>
+        <br><br><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Restaurant Ambiance">
+    </div>
+    <footer>
+        <h4>&copy; Jeffrin | 25009198</h4>
+    </footer>
+</body>
+</html>
+
+contact.css
+
+*{
+    padding:0%;
+    margin:0%;
+
+}
+body{
+    background-color:#F5F5DC;
+    overflow-y: hidden;
+}
+.box{
+    position:relative;
+    left:550px;
+    top:60px;
+    width:450px;
+    color:whitesmoke;
+    background-color: #A52A2A;
+    padding:10px;
+    border-radius:5%;
+    animation-name: anime;
+    animation-duration:0.8s;
+}
+.box img{
+    max-width:100%;
+    max-height:300px;
+    height:auto;
+    border-radius: 10%;
+    text-align: center;
+}
+.box h1{
+    text-align: center;
+    color:#FDEBD0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+footer{
+    background-color: #2e2e2e;
+    position: relative; 
+    top:80px;
+    padding:20px;
+    color:#F5F5DC;
+    text-align: center;
+}
+.box p{
+    font-family: cursive;
+}
+@keyframes anime{
+    from{
+        transform: scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+
+
+```
 
 ## OUTPUT:
+![alt text](<Screenshot (70).png>)
+![alt text](<Screenshot (71).png>)
+![alt text](<Screenshot (73).png>)
+![alt text](<Screenshot (74).png>)
+![alt text](<Screenshot (75).png>)
 
 
 ## RESULT:
