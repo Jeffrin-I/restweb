@@ -304,18 +304,16 @@ menu.html
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
+    <title>HappyFood - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Playfair+Display&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
 </head>
-
 <body>
-    <div class="box">
+    <section class="menu-section">
         <h1>Our Menu</h1>
-        <br><br><br><br>
         <div class="category">
             <div class="menu-item">
                 <img src="https://images.pexels.com/photos/725990/pexels-photo-725990.jpeg" alt="Calamari">
@@ -362,81 +360,149 @@ menu.html
                 <h3>Espresso</h3>
                 <p>Rich, bold Italian coffee. $3.99</p>
             </div>
+            <div class="menu-item">
+                <img src="7udlx3rm.png" alt="Chicken Parmesan">
+                <h3>Chicken Parmesan</h3>
+                <p>Breaded chicken breast topped with marinara and mozzarella. $16.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="703mt8wr.png" alt="Caprese Salad">
+                <h3>Caprese Salad</h3>
+                <p>Fresh tomatoes, mozzarella, basil, and balsamic glaze. $7.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg" alt="Lemon Sorbet">
+                <h3>Lemon Sorbet</h3>
+                <p>Refreshing lemon dessert with a zesty finish. $5.99</p>
+            </div>
         </div>
-    </div>
+    </section>
     <footer>
-        <h4>&copy; Jeffrin | 25009198</h4>
+        <h4>&copy; HappyFood 2025 | Jeffrin | 25009198</h4>
+        <div class="social-links">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter"></a>
+        </div>
     </footer>
 </body>
-
 </html>
+
 
 menu.css
 
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: beige;
+    font-family: 'Open Sans', sans-serif;
+    color: #2A2D43;
+}
+
+.menu-section {
+    padding: 50px;
     text-align: center;
-    font-size: large;
 }
-p{
-    font-weight: 500;
-font-family: 'Playfair Display', serif;
+
+.menu-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2A2D43;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-.box{
-    margin-bottom: 100px;
-}
-.menu-item img {
-    max-width: 100%;
-    max-height: 300px;
-    height: auto;
-    border-radius: 10%;
-    text-align: center;
-    animation: scaleUp 1.2s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.5);
-    animation-duration: 0.2s;
-}
-.menu-item h3,p{
-    position:relative;
-    top:20px;
-}
-.box h1{
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     padding: 20px;
-    color:#FAF9F6;
-    background-color: #A52A2A;
 }
-.category{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 55px;
+
+.menu-item {
+    background: #FAF9F6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: scaleUp 1s ease-out forwards;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #2A2D43;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #2e2e2e;
+    color: #FAF9F6;
     text-align: center;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 40px;
 }
-@keyframes scaleUp{
-    from{
-        transform: scale(0.5);
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: scale(1);
         opacity: 1;
     }
 }
-footer{
-    background-color: #2e2e2e;
-    font-family: 'Roboto Mono', monospace;
-    color:#FAF9F6;
-    position:fixed;
-    top:93%;
-    text-align: center;
-    width:100%;
-    padding:20px;
+
+#navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #A52A2A;
+    width: 100%;
+    padding: 20px;
+}
+
+#navbar {
+    display: flex;
+}
+
+.menu-section {
+    padding: 20px;
 }
 
 contact.html
@@ -525,8 +591,8 @@ footer{
 ## OUTPUT:
 ![alt text](<Screenshot (70).png>)
 ![alt text](<Screenshot (71).png>)
-![alt text](<Screenshot (73).png>)
-![alt text](<Screenshot (74).png>)
+![alt text](<Screenshot (78).png>)
+![alt text](<Screenshot (79).png>)
 ![alt text](<Screenshot (75).png>)
 
 

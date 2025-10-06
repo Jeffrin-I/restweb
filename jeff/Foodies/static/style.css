@@ -109,12 +109,12 @@ p {
     }
 }
 li:hover{
-    background-color: #2A2D43;
+    background-color: #dfdf27;
     border-radius: 10px;
     
 }
 #navbar a:hover{
-    color: #A2C7E5;
+    color: #06233b;
     cursor:pointer;
 }
 #footer h4{
